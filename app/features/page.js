@@ -1,11 +1,16 @@
-// export default function Features() {
-//   return (
-//     <div className="p-10 text-center">
-//       <h1 className="text-3xl font-bold">Features Page</h1>
-//       <p className="mt-4">Hello</p>
-//     </div>
-//   );
-// }export default function Features() {
+export default function Features() {
+  return (
+    <div className="p-10 text-center">
+      <h1 className="text-3xl font-bold">Features Page</h1>
+      <p className="mt-4">Hello</p>
+    </div>
+  );
+
+
+ }
+
+
+//export default function Features() {
 //   // Features Data Array - Edit your features here easily!
 //   // I have used HTML for titles so you can highlight words with the same green color.
 //   const featuresList = [
