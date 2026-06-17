@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col w-full bg-white dark:bg-gray-950">
       
-      {/* 1. Hero Section */}
+     {/* 1. Hero Section */}
       <Hero />
       
       {/* 2. Features Section */}
@@ -24,6 +24,7 @@ export default function Home() {
       <Contact />
 
 <FAQ/>
+
 
     </main>
   );
