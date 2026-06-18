@@ -3,6 +3,30 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="bg-white dark:bg-gray-950 py-16 lg:py-24 overflow-hidden">
+      <style>{`
+        @keyframes float-bounce {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
+        }
+        @keyframes badge-bounce {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-6px); }
+        }
+        .hero-image-bounce {
+          animation: float-bounce 3.5s ease-in-out infinite;
+        }
+        .hero-badge-bounce {
+          animation: badge-bounce 2.8s ease-in-out infinite;
+          animation-delay: 0.4s;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-image-bounce,
+          .hero-badge-bounce {
+            animation: none;
+          }
+        }
+      `}</style>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
           
@@ -67,13 +91,13 @@ export default function Hero() {
           {/* Right Column: Image & Floating Badge */}
           <div className="w-full lg:w-1/2 flex flex-col items-center mt-12 lg:mt-0 relative">
             <img 
-              className="w-[90%] sm:w-[80%] lg:w-[90%] rounded-2xl shadow-2xl object-cover border border-gray-100 dark:border-gray-800" 
+              className="hero-image-bounce w-[90%] sm:w-[80%] lg:w-[90%] rounded-2xl shadow-2xl object-cover border border-gray-100 dark:border-gray-800" 
               src="https://greenping.in/imgs/outer-home/hero-home.webp" 
               alt="WhatsApp Marketing Dashboard"
             />
             
             {/* Floating badge over image */}
-            <div className="relative -mt-6 sm:-mt-8 z-10 text-center">
+            <div className="hero-badge-bounce relative -mt-6 sm:-mt-8 z-10 text-center">
               <span className="bg-[#0f2b3d] text-white px-5 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium inline-flex items-center gap-2 shadow-xl border border-gray-700">
                 <i className="fab fa-whatsapp text-green-400 text-lg"></i> Official Meta Partner
               </span>

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Features() {
-  // Array of features with HTML to highlight specific words just like your screenshot
   const featuresList = [
     {
       title: 'Embedded <span class="text-teal-500">Signup</span>',
@@ -57,8 +56,20 @@ export default function Features() {
 
   return (
     <section id="features-modern" className="py-20 bg-[#fafcff]">
+      <style>{`
+        .feature-card .feature-icon {
+          background-color: #f0f4f8;
+          color: #0f2b3d;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+          background-color: #0f2b3d;
+          color: #f0f4f8;
+        }
+      `}</style>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-teal-50 text-teal-600 font-semibold text-sm mb-4">
@@ -73,25 +84,23 @@ export default function Features() {
         </div>
 
         {/* Features Grid */}
-        {/* On mobile it's 1 column, on screens wider than tablet (md) it becomes 2 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {featuresList.map((feature, index) => (
-            // CARD CONTAINER - with Hover Animation & Shadow
-            <div 
-              key={index} 
-              className="flex items-start gap-5 p-8 bg-white rounded-3xl cursor-pointer
-                         shadow-[0_4px_20px_rgba(0,0,0,0.03)] 
+            <div
+              key={index}
+              className="feature-card flex items-start gap-5 p-8 bg-white rounded-3xl cursor-pointer
+                         shadow-[0_4px_20px_rgba(0,0,0,0.03)]
                          transition-all duration-300 ease-in-out
                          hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]"
             >
               {/* Feature Icon */}
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-[#f0f4f8] text-[#0f2b3d] text-2xl">
+              <div className="feature-icon flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl text-2xl">
                 <i className={feature.icon}></i>
               </div>
-              
+
               {/* Feature Text */}
               <div>
-                <h3 
+                <h3
                   className="text-xl font-bold text-[#0f2b3d] mb-2 tracking-wide"
                   dangerouslySetInnerHTML={{ __html: feature.title }}
                 />
@@ -102,7 +111,6 @@ export default function Features() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

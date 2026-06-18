@@ -4,6 +4,7 @@ import About from "../components/About";
 import Pricing from "../components/Pricing"
 import Contact from "../components/Contact"
 import FAQ from "../components/FAQ"
+import WhatsAppButton from "@/components/Whatsappbutton";
  
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
 
 <FAQ/>
 
+<WhatsAppButton/>
 
     </main>
   );

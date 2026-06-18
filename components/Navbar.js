@@ -20,8 +20,8 @@ export default function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               {/* Note: Standard img is used here for external URL. If you use next/image, you need to configure next.config.js */}
-              <img
-                src="https://greenping.in/media-storage/logo/6a000c738398f---geen-ping-20250206-192704-0000.png"
+              <img 
+                src="/assets/logo.png"
                 alt="GreenPing Logo"
                 className="h-[55px] w-auto cursor-pointer"
               />
