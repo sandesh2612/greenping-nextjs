@@ -55,7 +55,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features-modern" className="py-20 bg-[#fafcff]">
+    <section id="features-modern" className="py-10 bg-[#fafcff]">
       {/* Custom Keyframes for the Gentle Pop Animation */}
       <style>{`
         @keyframes gentlePop {

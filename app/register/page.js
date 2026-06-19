@@ -20,7 +20,7 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-[#f8fafc] py-10 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
       
       {/* Background Decor (Optional premium feel) */}
       <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-[#0f2b3d]/5 to-transparent pointer-events-none"></div>

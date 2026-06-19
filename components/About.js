@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="section-about" className="py-20 bg-[#fafcff]">
+    <section id="section-about" className="py-10 bg-[#fafcff]">
       <style>{`
         /* Flowing Text Gradient Animation */
         @keyframes textGradientFlow {

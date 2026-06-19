@@ -87,7 +87,7 @@ export default function Features() {
 //   ];
 
 //   return (
-//     <section id="features-modern" className="py-20 bg-gray-50 border-t border-gray-100">
+//     <section id="features-modern" className="py-10 bg-gray-50 border-t border-gray-100">
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
 //         {/* Section Header */}
