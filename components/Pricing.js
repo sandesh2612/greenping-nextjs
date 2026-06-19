@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export default function Pricing() {
-  // Feature lists for cleaner code
+  // Feature lists
   const freeFeatures = [
     { value: "10", name: "Contacts" },
     { value: "5", name: "Campaigns Per Month" },
@@ -26,54 +26,56 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing-section" className="py-20 bg-gray-50 border-t border-gray-100">
+    <section id="pricing-section" className="py-20 bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-600 font-semibold text-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f0f4f8] text-[#0f2b3d] font-bold text-xs mb-6">
             <i className="fas fa-tag"></i> Flexible Pricing Plans
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0f2b3d] mb-4 tracking-tight">
-            <span className="text-teal-500">GreenPing</span> User Plans
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0f2b3d] mb-4 tracking-tight">
+            <span className="text-[#0eb487]">GreenPing</span> User Plans
           </h2>
-          <p className="text-lg text-gray-500 font-medium">
+          <p className="text-base text-gray-500 font-medium">
             Choose the perfect plan for your business growth <i className="fas fa-chart-line ml-1"></i>
           </p>
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           
-          {/* 1. Free Plan Card */}
-          <div className="flex flex-col bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]">
-            <h4 className="text-2xl font-bold text-[#0f2b3d] mb-4">Free Plan</h4>
+          {/* 1. Free Plan Card (Hover Teal Border) */}
+          <div className="group flex flex-col bg-white rounded-[2rem] p-8 lg:p-10 shadow-sm border-2 border-gray-100 hover:border-[#0eb487] hover:shadow-[0_8px_30px_rgb(14,180,135,0.1)] transition-all duration-300">
+            <h4 className="text-2xl font-extrabold text-[#0f2b3d] mb-6">
+              Free <span className="text-[#0eb487]">Plan</span>
+            </h4>
             
-            <div className="mb-4">
-              <span className="text-4xl font-extrabold text-[#0f2b3d]">₹0.00</span>
-              <span className="text-gray-500 font-medium"> /yearly</span>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-600 text-xs font-bold rounded-full ml-3 align-text-top">
+            <div className="mb-2 flex items-baseline flex-wrap">
+              <span className="text-[32px] sm:text-[40px] font-extrabold text-[#0eb487] leading-none">₹0.00 INR</span>
+              <span className="text-gray-400 font-medium text-sm ml-2">/yearly</span>
+              <div className="inline-flex items-center gap-1.5 text-[#0eb487] text-xs font-bold ml-3">
                 <i className="fas fa-gift"></i> Forever Free
               </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 mt-4">
               <a 
                 href="https://business.whatsapp.com/products/platform-pricing" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors inline-flex items-center gap-1.5"
+                className="text-[13px] font-semibold text-gray-300 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
               >
-                <i className="fas fa-external-link-alt"></i> + WhatsApp Cloud Messaging Charges
+                <i className="fas fa-external-link-square-alt"></i> + WhatsApp Cloud Messaging Charges
               </a>
             </div>
 
-            <hr className="border-gray-100 mb-6" />
+            <hr className="border-gray-100 mb-8 transition-colors duration-300 group-hover:border-teal-50" />
 
-            <ul className="flex-1 space-y-4">
+            <ul className="flex-1 space-y-5">
               {freeFeatures.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-gray-600">
-                  <i className="fas fa-check-circle text-teal-500 mt-1"></i>
+                <li key={idx} className="flex items-center gap-3 text-gray-600 text-[15px]">
+                  <i className="fas fa-check-circle text-[#0eb487] text-lg"></i>
                   <span>
                     {feature.value && <strong className="text-[#0f2b3d] mr-1">{feature.value}</strong>}
                     {feature.name}
@@ -83,46 +85,50 @@ export default function Pricing() {
             </ul>
           </div>
 
-          {/* 2. Standard Plan Card (Most Popular) */}
-          <div className="flex flex-col bg-white rounded-3xl p-8 shadow-[0_12px_30px_rgba(0,0,0,0.08)] border-2 border-teal-500 relative transform md:-translate-y-4 transition-all duration-300">
+          {/* 2. Standard Plan Card (Hover Teal Border & Shadow) */}
+          <div className="group flex flex-col bg-white rounded-[2rem] p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border-2 border-transparent hover:border-[#0eb487] transition-all duration-300 relative mt-8 md:mt-0">
             
-            {/* Popular Badge */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-teal-500 to-green-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1.5 shadow-md">
-              <i className="fas fa-star text-yellow-300"></i> Most Popular
+            {/* Most Popular Badge */}
+            <div className="absolute top-6 right-6 bg-[#0eb487] text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5">
+              <i className="fas fa-star"></i> Most Popular
             </div>
 
-            <h4 className="text-2xl font-bold text-[#0f2b3d] mb-4 mt-2">Standard</h4>
+            <h4 className="text-2xl font-extrabold text-[#0eb487] mb-6 mt-2 md:mt-0">
+              Standard
+            </h4>
             
-            <div className="mb-2">
-              <span className="text-4xl font-extrabold text-[#0f2b3d]">₹399.00</span>
-              <span className="text-gray-500 font-medium"> /monthly</span>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-50 text-yellow-600 text-xs font-bold rounded-full ml-3 align-text-top border border-yellow-100">
+            {/* Monthly Price */}
+            <div className="mb-4 flex items-baseline flex-wrap">
+              <span className="text-[32px] sm:text-[40px] font-extrabold text-[#0f2b3d] leading-none">₹399.00 INR</span>
+              <span className="text-gray-400 font-medium text-sm ml-2">/monthly</span>
+              <div className="inline-flex items-center gap-1 text-[#0eb487] text-xs font-bold ml-3">
                 <i className="fas fa-percent"></i> Save 15% yearly
               </div>
             </div>
 
-            <div className="mb-4 text-gray-500 font-medium text-sm">
-              <span className="text-lg font-bold text-gray-400 line-through mr-2">₹4,788.00</span> 
-              <span className="text-xl font-bold text-[#0f2b3d]">₹1,999.00</span> /yearly
+            {/* Yearly Price */}
+            <div className="mb-2 flex items-baseline flex-wrap">
+              <span className="text-[28px] sm:text-[32px] font-extrabold text-[#0eb487] leading-none">₹1,999.00 INR</span>
+              <span className="text-gray-400 font-medium text-sm ml-2">/yearly</span>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 mt-4">
               <a 
                 href="https://business.whatsapp.com/products/platform-pricing" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors inline-flex items-center gap-1.5"
+                className="text-[13px] font-semibold text-gray-300 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
               >
-                <i className="fas fa-external-link-alt"></i> + WhatsApp Cloud Messaging Charges
+                <i className="fas fa-external-link-square-alt"></i> + WhatsApp Cloud Messaging Charges
               </a>
             </div>
 
-            <hr className="border-gray-100 mb-6" />
+            <hr className="border-gray-100 mb-8 transition-colors duration-300 group-hover:border-teal-50" />
 
-            <ul className="flex-1 space-y-4 mb-8">
+            <ul className="flex-1 space-y-5 mb-10">
               {standardFeatures.map((feature, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-gray-600">
-                  <i className="fas fa-check-circle text-teal-500 mt-1"></i>
+                <li key={idx} className="flex items-center gap-3 text-gray-600 text-[15px]">
+                  <i className="fas fa-check-circle text-[#0eb487] text-lg"></i>
                   <span>
                     {feature.value && <strong className="text-[#0f2b3d] mr-1">{feature.value}</strong>}
                     {feature.name}
@@ -133,25 +139,13 @@ export default function Pricing() {
 
             <Link 
               href="/register" 
-              className="w-full py-4 px-6 bg-teal-500 hover:bg-teal-600 text-white text-center font-bold rounded-xl transition-all shadow-lg hover:shadow-teal-500/30 flex items-center justify-center gap-2"
+              className="mt-auto mx-auto w-max px-8 py-3.5 bg-[#0f2b3d] hover:bg-[#163c55] text-white font-bold rounded-full transition-all shadow-md flex items-center justify-center gap-2"
             >
               Start Free Trial <i className="fas fa-arrow-right"></i>
             </Link>
           </div>
 
         </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-16 pt-8 border-t border-gray-200">
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-sm font-medium text-gray-500">
-            <span className="flex items-center gap-2"><i className="fas fa-lock text-gray-400"></i> 256-bit SSL Secure</span>
-            <span className="flex items-center gap-2"><i className="fas fa-credit-card text-gray-400"></i> No Hidden Fees</span>
-            <span className="flex items-center gap-2"><i className="fas fa-sync-alt text-gray-400"></i> Cancel Anytime</span>
-            <span className="flex items-center gap-2"><i className="fab fa-whatsapp text-green-500"></i> Meta Official Partner</span>
-            <span className="flex items-center gap-2"><i className="fas fa-headset text-gray-400"></i> 24/7 Support</span>
-          </div>
-        </div>
-
       </div>
     </section>
   );

@@ -5,6 +5,24 @@ export default function About() {
   return (
     <section id="section-about" className="py-20 bg-[#fafcff]">
       <style>{`
+        /* Flowing Text Gradient Animation */
+        @keyframes textGradientFlow {
+          0% { background-position: 0% center; }
+          50% { background-position: 100% center; }
+          100% { background-position: 0% center; }
+        }
+
+        .animate-text-gradient-flow {
+          background: linear-gradient(135deg, #0f2b3d, #2dd4bf, #0f2b3d, #38bdf8);
+          background-size: 300% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: textGradientFlow 5s linear infinite;
+          display: inline-block;
+        }
+
+        /* Image Bounce Animation */
         @keyframes float-bounce {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-14px); }
@@ -50,6 +68,7 @@ export default function About() {
         .wa-ripple:nth-child(3) { animation-delay: 1.6s; }
 
         @media (prefers-reduced-motion: reduce) {
+          .animate-text-gradient-flow { animation: none; background-position: 0% center; }
           .about-image-bounce { animation: none; }
           .about-image-bounce:hover { transform: none; }
           .wa-pulse { animation: none; }
@@ -68,15 +87,15 @@ export default function About() {
             <div className="w-full lg:w-1/2 flex flex-col text-center lg:text-left items-center lg:items-start">
 
               {/* Animated Gradient Brand Name */}
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-green-500">
+              <h1 className="text-4xl md:text-4xl font-extrabold tracking-tight">
+                <span className="animate-text-gradient-flow">
                   GreenPing
                 </span>
-                <span className="text-2xl align-super text-gray-400 font-medium ml-1">TM</span>
+                <span className="text-sm align-super text-teal-400 font-medium ml-1">TM</span>
               </h1>
 
               {/* Subtitle with Meta Badge */}
-              <h2 className="text-lg md:text-xl font-medium text-gray-500 mt-4 flex flex-wrap justify-center lg:justify-start items-center gap-3">
+              <h2 className="text-lg md:text-xl font-medium text-teal-600 mt-4 flex flex-wrap justify-center lg:justify-start items-center gap-3">
                 is based on
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-bold border border-teal-100 shadow-sm transition-transform hover:scale-105 cursor-default">
                   <i className="fas fa-check-circle text-teal-500"></i> Meta Verified
@@ -84,28 +103,28 @@ export default function About() {
               </h2>
 
               {/* Main Heading with Animated WhatsApp Icon */}
-              <h3 className="text-2xl md:text-3xl font-bold text-[#0f2b3d] mt-6 mb-4 flex items-center justify-center lg:justify-start gap-3 flex-wrap">
+              <h3 className="text-2xl md:text-xl font-semibold text-teal-600 mt-6 mb-4 flex items-center justify-center lg:justify-start gap-3 flex-wrap">
                 Official WhatsApp Cloud API
                 {/* WhatsApp icon with ripple animation */}
                 <span className="relative inline-flex items-center justify-center w-10 h-10">
                   <span className="wa-ripple"></span>
                   <span className="wa-ripple"></span>
                   <span className="wa-ripple"></span>
-                  <i className="fab fa-whatsapp text-[#25D366] text-4xl wa-pulse relative z-10"></i>
+                  <i className="fab fa-whatsapp text-[#25D366] text-xl "></i>
                 </span>
               </h3>
 
               {/* Description Paragraph */}
               <div className="text-gray-500 leading-relaxed text-[16px] max-w-xl">
                 <p>
-                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-green-500">GreenPing</span> integrates with the{' '}
+                  <strong className="animate-text-gradient-flow font-bold">GreenPing</strong> integrates with the{' '}
                   <span className="font-bold text-teal-600">Official WhatsApp Cloud API</span>, providing a streamlined solution for businesses.
                   With <strong className="text-[#0f2b3d]">real-time messaging</strong>, <strong className="text-[#0f2b3d]">automated responses</strong>, and <strong className="text-[#0f2b3d]">easy management</strong>.
                   Secure conversations worldwide — all within one unified interface.
                 </p>
 
                 {/* AI & Uptime Stats Pill */}
-                <div className="mt-8 inline-flex flex-wrap justify-center lg:justify-start items-center gap-4 bg-[#eef2ff] px-5 py-2.5 rounded-full text-sm font-medium text-[#0f2b3d]">
+                <div className="mt-8 inline-flex flex-wrap justify-center lg:justify-start items-center gap-x-2.5 gap-y-2 bg-[#eef2ff] px-5 py-2.5 rounded-full text-sm font-medium text-[#0f2b3d]">
                   <span className="flex items-center gap-2">
                     <i className="fas fa-chart-line text-teal-500"></i> AI-powered analytics ⚡
                   </span>
@@ -147,7 +166,7 @@ export default function About() {
 
           {/* Extra decorative element */}
           <div className="mt-12 pt-6 flex justify-center items-center opacity-70">
-            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-gray-500">
+            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-black-500">
               <i className="fas fa-sync-alt text-teal-500 animate-[spin_3s_linear_infinite]"></i>
               Always synced · Real-time · Global infrastructure
             </span>
