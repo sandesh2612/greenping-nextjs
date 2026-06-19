@@ -9,7 +9,7 @@ export default function Register() {
   // Form submission handler to simulate the loading animation
   const handleSubmit = (e) => {
     // Note: If you want the form to submit normally to your Laravel backend, 
-    // remove e.preventDefault(). This is just to show the loading state.
+    // remove e.preventDefault( ). This is just to show the loading state.
     // e.preventDefault(); 
     setIsSubmitting(true);
     

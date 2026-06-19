@@ -161,11 +161,7 @@ export default function Hero() {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <a href="#" className="fixed bottom-6 right-6 z-50 bg-[#e6fcf0] p-2.5 rounded-full shadow-[0_8px_25px_rgba(37,211,102,0.3)] hover:scale-110 transition-transform duration-300">
-        <div className="bg-[#25D366] text-white w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full">
-          <i className="fab fa-whatsapp text-2xl sm:text-[32px] leading-none"></i>
-        </div>
-      </a>
+     
       
     </section>
   );
