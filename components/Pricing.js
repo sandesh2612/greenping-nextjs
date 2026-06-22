@@ -46,16 +46,16 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* 1. Free Plan Card (Hover Teal Border) */}
           <div className="group flex flex-col bg-white rounded-[2rem] p-8 lg:p-10 shadow-sm border-2 border-gray-100 hover:border-[#0eb487] hover:shadow-[0_8px_30px_rgb(14,180,135,0.1)] transition-all duration-300">
-            <h4 className="text-2xl font-extrabold mb-6 mt-2 md:mt-0  bg-[linear-gradient(120deg,_#0f2b3d,_#2dd4bf)] bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 mt-2 md:mt-0  bg-[linear-gradient(120deg,_#0f2b3d,_#2dd4bf)] bg-clip-text text-transparent">
               {" "}
-              free plan
+              Free plan
             </h4>
 
             <div className="mb-2 flex items-baseline flex-wrap">
-              <span className="text-[32px] sm:text-[40px] font-extrabold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
+              <span className="text-[32px] sm:text-[32px] font-bold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
                 ₹0.00 INR
               </span>
-              <span className="text-gray-400 font-medium text-sm ml-2">
+              <span className="text-gray-600 font-medium text-sm ml-2">
                 /yearly
               </span>
               <div className="inline-flex items-center gap-1.5 text-[#0eb487] text-xs font-bold ml-3">
@@ -68,7 +68,7 @@ export default function Pricing() {
                 href="https://business.whatsapp.com/products/platform-pricing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] font-semibold text-gray-300 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
+                className="text-[13px] font-semibold text-gray-600 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
               >
                 <i className="fas fa-external-link-square-alt"></i> + WhatsApp
                 Cloud Messaging Charges
@@ -104,16 +104,16 @@ export default function Pricing() {
               <i className="fas fa-star"></i> Most Popular
             </div>
 
-            <h4 className="text-2xl font-extrabold mb-6 mt-2 md:mt-0 inline-block bg-[linear-gradient(120deg,_#0f2b3d,_#2dd4bf)] bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 mt-2 md:mt-0 inline-block bg-[linear-gradient(120deg,_#0f2b3d,_#2dd4bf)] bg-clip-text text-transparent">
               Standard
             </h4>
 
             {/* Monthly Price */}
             <div className="mb-4 flex items-baseline flex-wrap">
-              <span className="text-[32px] sm:text-[40px] font-extrabold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
+              <span className="text-[32px] sm:text-[32px] font-bold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
                 ₹399.00 INR
               </span>
-              <span className="text-gray-400 font-medium text-sm ml-2">
+              <span className="text-gray-600 font-medium text-sm ml-2">
                 /monthly
               </span>
               <div className="inline-flex items-center gap-1 text-[#0eb487] text-xs font-bold ml-3">
@@ -123,10 +123,10 @@ export default function Pricing() {
 
             {/* Yearly Price */}
             <div className="mb-2 flex items-baseline flex-wrap">
-              <span className="text-[32px] sm:text-[40px] font-extrabold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
+              <span className="text-[32px] sm:text-[32px] font-bold bg-gradient-to-r from-[#0f2b3d] to-[#2dd4bf] bg-clip-text text-transparent leading-none">
                 ₹1,999.00 INR
               </span>
-              <span className="text-gray-400 font-medium text-sm ml-2">
+              <span className="text-gray-600 font-medium text-sm ml-2">
                 /yearly
               </span>
             </div>
@@ -136,7 +136,7 @@ export default function Pricing() {
                 href="https://business.whatsapp.com/products/platform-pricing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[13px] font-semibold text-gray-300 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
+                className="text-[13px] font-semibold text-gray-600 hover:text-gray-400 transition-colors inline-flex items-center gap-1.5"
               >
                 <i className="fas fa-external-link-square-alt"></i> + WhatsApp
                 Cloud Messaging Charges

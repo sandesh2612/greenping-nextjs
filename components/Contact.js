@@ -20,9 +20,15 @@ export default function Contact() {
             </div>
             
             {/* Heading & Description */}
-            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight tracking-tight">
               Let’s talk<br />We’re here to help
             </h2>
+            <p className="text-teal-50/80 mb-8 leading-relaxed text-[15px]">
+              We're here to help and answer any question you might have. We look forward to hearing from you!
+            </p>
+            
+            <hr className="border-white/10 mb-8" />
+
             <p className="text-teal-50/80 mb-8 leading-relaxed text-[15px]">
               We're here to help and answer any question you might have. We look forward to hearing from you!
             </p>
@@ -89,7 +95,7 @@ export default function Contact() {
           <div className="bg-[#fafcff] p-8 sm:p-12 lg:rounded-r-3xl border-y border-r border-gray-100 lg:shadow-xl relative z-0 flex flex-col justify-center">
             
             <div className="mb-8">
-              <h3 className="text-3xl font-extrabold text-[#0f2b3d] mb-2">Contact us</h3>
+              <h3 className="text-3xl font-bold text-[#0f2b3d] mb-2">Contact us</h3>
               <p className="text-gray-500 font-medium">Send a message and we’ll reply within 24h</p>
             </div>
 
@@ -170,7 +176,7 @@ export default function Contact() {
               {/* Submit Button */}
               <button 
                 type="submit" 
-                className="w-full mt-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-teal-500/30 flex items-center justify-center gap-2"
+                className="w-full mt-2 bg-[linear-gradient(95deg,#0f2b3d_0%,#1e6b5e_100%)] hover:bg-teal-600 text-white font-bold py-3.5 px-6 rounded-4xl transition-all shadow-lg hover:shadow-teal-500/30 flex items-center justify-center gap-2"
               >
                 <span>Submit</span>
                 <i className="fas fa-arrow-right"></i>

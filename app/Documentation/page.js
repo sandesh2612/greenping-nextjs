@@ -298,11 +298,13 @@ export default function ApiDocumentation() {
                   </div>
                   <i className={`fas fa-chevron-down text-gray-400 text-xs transition-transform ml-2 ${openEndpoints.sendText ? 'rotate-180' : ''}`}></i>
                 </div>
+                
               </div>
               
               {openEndpoints.sendText && (
                 <div className="p-6 border-t border-gray-200 bg-white">
                   <div className="overflow-x-auto mb-6 rounded-lg border border-gray-200">
+                    
                     <table className="w-full text-left text-sm">
                       <thead>
                         <tr className="bg-[#f8fafc] text-gray-700 border-b border-gray-200">
