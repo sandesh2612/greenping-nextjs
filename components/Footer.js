@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image"; // Note: For external images, ensure domains are configured in next.config.js, or use standard <img> tag as I did here for simplicity.
+import Image from "next/image"; 
 
 export default function Footer() {
   // Current year for copyright
